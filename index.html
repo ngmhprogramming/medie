@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Medical Schemes</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Russo One">
+    <style>
+      body {
+          font-family: 'Russo One', verdana;
+          font-size: 24px;
+      }
+    </style>
+    <script type="text/javascript">
+      function byid(id) {
+        	return document.getElementById(id).value;
+      }
+      
+      function byname(name) {            
+        	return document.getElementsByName(name);
+      }
+      
+      function submit() {        
+        	cost = Math.floor((Math.random() * 99999) + 1000);
+        	subsidy = (Math.ceil(cost/1000)*1000).toString()
+        
+        	name = byid('name');
+        	age = byid('age');
+        	income = byid('income');
+        	nric = byid('nric');
+        	conditions = byname('conditions');
+        	
+        	text = "Here are some interesting statistics:";
+        	text += "<br> age * income = " + (age*income);
+          text += "<br> number of letters in your name = " + name.length;
+        	text += "<br> you have cancer = " + conditions[0].checked;
+        
+        	document.getElementById("output").innerHTML = text;
+        	return false;	
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Medical Schemes uwu</h1>
+    <p>Please enter your details</p>
+
+    <label for="name">Name</label>
+    <input type="name" id="name"><br>
+    
+    <label for="age">Age</label>
+    <input type="number" id="age"><br>
+    1z
+    <label for="nric">Nric</label>
+    <input type="name" id="nric"><br>
+    
+    <label for="income">Income</label>
+    <input type="number" id="income"><br>
+    
+    Pre-existing conditions:
+    <label><input type="checkbox" name="conditions" value="cancer" /> Cancer</label>
+    <label><input type="checkbox" name="conditions" value="dementia" /> Dementia</label>
+    <label><input type="checkbox" name="conditions" value="diabetes" /> Diabetes</label><br>
+
+    <button onclick="submit()">Submit</button>
+    
+    <p id="output"></p>
+  </body>
+</html>
