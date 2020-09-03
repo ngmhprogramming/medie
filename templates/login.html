@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Medie Login</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,latin-ext" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" href="login.js"></script>
+  </head>
+  <body>
+    <div class="materialContainer">
+        <div class="box">
+            <form action="/login" method="POST">
+                <div class="title">LOGIN</div>
+            
+                <div class="input">
+                    <label for="name">Username</label>
+                    <input type="text" name="username" id="name">
+                    <span class="spin"></span>
+                </div>
+            
+                <div class="input">
+                    <label for="pass">Password</label>
+                    <input type="password" name="password" id="pass">
+                    <span class="spin"></span>
+                </div>
+            
+                <div class="button login">
+                    <button type="submit"><span>GO</span> <i class="fa fa-check"></i></button>
+                </div>
+                <a href="" class="pass-forgot">Forgot your password?</a>
+                </div>
+            </form>
+
+        <div class="overbox">
+            <form action="/register" method="POST">
+                <div class="material-button alt-2"><span class="shape"></span></div>
+                <div class="title">REGISTER</div>
+            
+                <div class="input">
+                    <label for="regname">Username</label>
+                    <input type="text" name="username" id="regname">
+                    <span class="spin"></span>
+                </div>
+            
+                <div class="input">
+                    <label for="regpass">Password</label>
+                    <input type="password" name="password" id="regpass">
+                    <span class="spin"></span>
+                </div>
+            
+                <div class="input">
+                    <label for="reregpass">Repeat Password</label>
+                    <input type="password" name="confirm" id="reregpass">
+                    <span class="spin"></span>
+                </div>
+            
+                <div class="button">
+                    <button type="submit"><span>NEXT</span></button>
+                </div>
+            </form>
+        </div>
+     </div>
+  </body>
+</html>
