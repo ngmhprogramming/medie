@@ -1,18 +1,16 @@
 from flask import Flask, render_template, session, redirect, url_for, request
 
-app = Flask(__name__)
-app.secret_key = "shellshock69420"
+app = Flask(__name__, static_url_path="/static")
+app.secret_key = "mereallywannadie69420"
 
 def get_username():
     if "username" in session: return session["username"]
     return False
 
-
 @app.route("/")
 def index():
     return render_template("index.html")
 
-"""
 @app.route("/login", methods=["GET", "POST"])
 def login():
     username = get_username()
@@ -25,36 +23,38 @@ def login():
         username = request.form["username"]
         password = request.form["password"]
         
-        if db.login(username, hash(password)):
-            session["username"] = username
-            return redirect(url_for("index"))
-        return render_template("login.html", error="Invalid Username or Password")
+        session["username"] = "Lum Name"
+        return redirect(url_for("index"))
+
+        #if db.login(username, hash(password)):
+        #    session["username"] = username
+        #    return redirect(url_for("index"))
+        #return render_template("login.html", error="Invalid Username or Password")
 
 @app.route("/logout")
 def logout():
     session.pop("username", None)
-    return redirect(url_for("index"))
+    return redirect(url_for("login"))
 
-@app.route("/signup", methods=["GET", "POST"])
-def signup():
+@app.route("/register", methods=["GET", "POST"])
+def register():
     username = get_username()
     if username:
         return redirect(url_for("index"))
 
     if request.method == "GET":
-        return render_template("signup.html")
+        return redirect(url_for("login"))
     else:
         username = request.form["username"]
         password = request.form["password"]
-        pnumber = request.form["pnumber"]
-        email = request.form["email"]
+        password = request.form["confirm"]
 
-        password = hash(password)
-        if db.register(username, pnumber, email, password):
-            return redirect(url_for("login"))
-        return render_template("signup.html", error="Username taken!")
+        return redirect(url_for("login"))
 
-"""
+        #password = hash(password)
+        #if db.register(username, pnumber, email, password):
+        #    return redirect(url_for("login"))
+        #return render_template("signup.html", error="Username taken!")
 
 if __name__ == "__main__":
     app.run(debug=True)
