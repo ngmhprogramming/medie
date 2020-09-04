@@ -9,7 +9,23 @@ def get_username():
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    username = get_username()
+    if not username:
+        return redirect(url_for("login"))
+
+    session["name"] = "Mr Lum"
+    return redirect(url_for("setup"))
+    #return render_template("index.html")
+
+
+@app.route("/setup")
+def setup():
+    username = get_username()
+    if not username:
+        return redirect(url_for("login"))
+
+    return render_template("setup.html",myname = session["name"])
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
