@@ -74,7 +74,17 @@ def register():
 
 @app.route("/details", methods=["GET", "POST"])
 def details():
-    return render_template("details.html")
+    if request.method == "GET":
+        return render_template("details.html")
+    else:
+        return redirect(url_for("bills"))
+
+@app.route("/bills", methods=["GET", "POST"])
+def bills():
+    if request.method == "GET":
+        return render_template("bills.html")
+    else:
+        return redirect(url_for("bills"))
 
 if __name__ == "__main__":
     app.run(debug=True)

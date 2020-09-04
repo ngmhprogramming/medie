@@ -11,14 +11,30 @@
       
     <div class="materialContainer">
         <div class="box" style="margin-top: 250px">
-            <form action="/login" method="POST">
-                <div class="title">hi lumisepic69420</div>
+            <form action="/details" method="POST">
+                <div class="title">hi lumthechickenriceman</div>
                 
                 <div class="title">fill ur details pls</div>
 
                 <div class="input">
                     <label for="name">name</label>
                     <input type="text" name="name" id="name">
+                    <span class="spin"></span>
+                </div>
+
+                <div class="input">
+                    <span class="text">type of care</span><br>
+                    <select id="care" name="care" class="text" style="margin-top: 10px">
+                        <option value="pri">primary care</option>
+                        <option value="acute">acute hospitalisation</option>
+                        <option value="long">long term medical care</option>
+                    </select>
+                    <span class="spin"></span>
+                </div>
+
+                <div class="input">
+                    <label for="medicine">medicine & usage</label>
+                    <input type="textarea" name="medicine" id="medicine">
                     <span class="spin"></span>
                 </div>
 
@@ -41,23 +57,6 @@
                     <span class="spin"></span>
                 </div>
                 
-                <div class="input">
-                    <!--<label for="bill">bill pics plz</label>-->
-                    <span class="text">type of care</span><br>
-                    <select id="care" name="care" class="text" style="margin-top: 10px">
-                        <option value="pri">primary care</option>
-                        <option value="acute">acute hospitalisation</option>
-                        <option value="long">long term medical care</option>
-                    </select>
-                    <span class="spin"></span>
-                </div>
-
-                <div class="input">
-                    <label for="medicine">medicine & usage</label>
-                    <input type="textarea" name="medicine" id="medicine">
-                    <span class="spin"></span>
-                </div>
-
                 <div class="button login">
                     <button type="submit"><span>GO</span> <i class="fa fa-check"></i></button>
                 </div>
