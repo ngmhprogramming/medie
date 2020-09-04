@@ -31,7 +31,7 @@ def setup():
 def login():
     username = get_username()
     if username:
-        return redirect(url_for("index"))
+        return redirect(url_for("details"))
 
     if request.method == "GET":
         return render_template("login.html")
@@ -40,7 +40,7 @@ def login():
         password = request.form["password"]
         
         session["username"] = "Lum Name"
-        return redirect(url_for("index"))
+        return redirect(url_for("details"))
 
         #if db.login(username, hash(password)):
         #    session["username"] = username
@@ -71,6 +71,10 @@ def register():
         #if db.register(username, pnumber, email, password):
         #    return redirect(url_for("login"))
         #return render_template("signup.html", error="Username taken!")
+
+@app.route("/details", methods=["GET", "POST"])
+def details():
+    return render_template("details.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
