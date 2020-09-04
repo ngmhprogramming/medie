@@ -1,3 +1,7 @@
+.dividertext {
+    display: inline-block;
+}
+
 .box {
     position: relative;
     top: 0;
@@ -11,6 +15,8 @@
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     z-index: 5;
+    max-height: 90vh;
+    overflow: hidden;
  }
  
  .box.back {
@@ -21,6 +27,10 @@
     opacity: .8;
     z-index: -1;
  }
+
+.box:hover {
+     overflow: auto;
+}
  
  
  .overbox .title {
@@ -88,7 +98,7 @@
  
  .input,
  .button {
-    margin-top: 30px;
+    margin: 15px 0px 15px 0px;
     height: 70px;
  }
  
@@ -110,7 +120,7 @@
  .input label,
  .button button {
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     color: rgba(0, 0, 0, 0.8);
     font-weight: 300;
  }
@@ -349,7 +359,7 @@
  }
  
  body {
-    background-image: url(https://lh4.googleusercontent.com/-XplyTa1Za-I/VMSgIyAYkHI/AAAAAAAADxM/oL-rD6VP4ts/w1184-h666/Android-Lollipop-wallpapers-Google-Now-Wallpaper-2.png);
+    background-image: url(pexels.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -359,7 +369,7 @@
  
  body,
  html {
-    overflow: hidden;
+    overflow: auto;
  }
  
  .materialContainer {
@@ -379,7 +389,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 0;
+    
     padding: 0;
     text-decoration: none;
     list-style-type: none;

@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Medi</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,latin-ext" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="static/default.css">
+    <script src="static/login.js"></script>
+  </head>
+  <body>
+      
+    <div class="materialContainer">
+        <div class="box">
+            <form action="#" method="POST">
+                <div class="title" style="margin-bottom: 25px;">Retrieve MyInfo<br>and Bank Details</div>
+                
+                <h3 class="dividertext">Please authorise Medi to retrieve data from MyInfo using SingPass</h3>
+                <p>Data we will collect:
+                    <ul>
+                        <li>CPF savings balance</li>
+                        <li>Medisave</li>
+                        <li>Birthday</li>
+                        <li>Citizenship</li>
+                    </ul>
+                </p>
+
+                <div class="input">
+                    <label for="name">Connect to MyInfo</label>
+                    <input type="" name="name" id="name">
+                    <span class="spin"></span>
+                </div>
+
+                <h3 class="dividertext">Please also authorise Medi to get your bank account balance with DBS</h3>
+                <p>Data we will collect: Bank balance</p>
+
+                <div class="input">
+                    <label for="name2">Connect to DBS</label>
+                    <input type="select" name="name2" id="name2">
+                    <span class="spin"></span>
+                </div>
+
+
+                <div class="button login">
+                    <button type="submit"><span>Retrieve data</span> <i class="fa fa-check"></i></button>
+                </div>
+                
+            </form>
+        </div>
+        </div>
+     
+  </body>
+</html>

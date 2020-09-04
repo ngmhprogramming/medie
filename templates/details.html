@@ -1,69 +1,80 @@
 <html>
   <head>
-    <title>Medie Login</title>
+    <title>Medi</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,latin-ext" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <link rel="stylesheet" href="static/login.css">
+    <link rel="stylesheet" href="static/default.css">
     <script src="static/login.js"></script>
   </head>
   <body>
       
     <div class="materialContainer">
-        <div class="box" style="margin-top: 250px">
-            <form action="/login" method="POST">
-                <div class="title">hi lumisepic69420</div>
+        <div class="box">
+            <form action="/setup" method="POST">
+                <div class="title">Hi there!</div>
                 
-                <div class="title">fill ur details pls</div>
+                <h1>Input your details here</h1>
 
                 <div class="input">
-                    <label for="name">name</label>
+                    <label for="name">Full Name</label>
                     <input type="text" name="name" id="name">
                     <span class="spin"></span>
                 </div>
 
                 <div class="input">
-                    <label for="bill1">once off medical bill</label>
+                    <span class="text" style="font-size: 18px;">Date of Bill</span><br>
+                    <input type="date" name="date" id="date" style="top:0px;">
+                    <span class="spin"></span>
+                </div>
+
+                <h2 class="dividertext" style="margin-top: 30px;">Medical bills ($)</h2>
+
+                <div class="input">
+                    <label for="bill1">One-off payment</label>
                     <input type="number" name="bill1" id="bill1">
                     <span class="spin"></span>
                 </div>
 
                 <div class="input">
-                    <label for="bill2">recurring medical bill / month</label>
+                    <label for="bill2">Monthly Recurring payment</label>
                     <input type="number" name="bill2" id="bill2">
                     <span class="spin"></span>
                 </div>
-                
+
                 <div class="input">
                     <!--<label for="bill">bill pics plz</label>-->
-                    <span class="text">bill scan</span>
-                    <input type="file" accept="image/*" capture="camera" name="bill" id="bill">
-                    <span class="spin"></span>
-                </div>
-                
-                <div class="input">
-                    <!--<label for="bill">bill pics plz</label>-->
-                    <span class="text">type of care</span><br>
-                    <select id="care" name="care" class="text" style="margin-top: 10px">
-                        <option value="pri">primary care</option>
-                        <option value="acute">acute hospitalisation</option>
-                        <option value="long">long term medical care</option>
+                    <span class="text" style="font-size: 18px;">Type Of Care</span><br>
+                    <select id="care" name="care" class="text" style="margin-top: 12px">
+                        <option value="pri">Primary Care</option>
+                        <option value="acute">Acute Hospitalisation</option>
+                        <option value="long">Long Term Medical Care</option>
                     </select>
                     <span class="spin"></span>
                 </div>
 
                 <div class="input">
-                    <label for="medicine">medicine & usage</label>
-                    <input type="textarea" name="medicine" id="medicine">
+                    <span style="font-size: 18px;">Medicine Prescibed and Usage</span><br>
+                    <div style="margin-top: 12px;width: 100%;">
+                        <textarea type="textarea" name="medicine" id="medicine" style="width: 100%;"></textarea>
+                    </div>
+                    <span class="spin"></span>
+                </div>
+
+                <h2 class="dividertext" style="margin-top: 30px;">Or scan your bill using OCR</h2>
+                <div class="input">
+                    <!--<label for="bill">bill pics plz</label>-->
+                    <input type="file" accept="image/*" capture="camera" name="bill" id="bill">
                     <span class="spin"></span>
                 </div>
 
                 <div class="button login">
                     <button type="submit"><span>GO</span> <i class="fa fa-check"></i></button>
                 </div>
-                </div>
+                
             </form>
         </div>
-     </div>
+        </div>
+     
   </body>
 </html>

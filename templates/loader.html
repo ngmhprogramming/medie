@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Medie Login</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,latin-ext" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="/static/default.css">
+    <script src="/static/login.js"></script>
+  </head>
+      
+<style>
+/* Center the loader */
+#loader {
+    display: block;
+    
+    width: 60px;
+    height: 60px;
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #ED2553;
+    -webkit-animation: spin 1.2s linear infinite;
+    animation: spin 1.2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+</style>
+
+
+  <body>
+      
+    <div class="materialContainer">
+        <div class="box">
+                
+            <div class="title">Getting your details</div>
+            <h2 class="dividertext" style="margin-bottom: 20px;">Please kindly wait a few seconds</h2>
+            <center><div id="loader"></div></center>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        myVar = setTimeout(showPage, 3500);
+        
+        function showPage() {
+          window.location.href = "/{{nextfunc}}";
+        }
+    </script>
+     
+  </body>
+</html>

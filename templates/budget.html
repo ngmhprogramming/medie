@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Medi</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,latin-ext" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="static/default.css">
+    <script src="static/login.js"></script>
+  </head>
+  <body>
+      
+    <div class="materialContainer">
+        <div class="box">
+            <form action="/budget" method="POST">
+                <div class="title">Budgeting</div>
+                
+                <h2>Please input your preferred budget per month</h2>
+
+                <div class="input">
+                    <label for="budget">Budget ($)</label>
+                    <input type="number" name="budget" id="budget">
+                    <span class="spin"></span>
+                </div>
+
+                <div class="button login">
+                    <button type="submit"><span>NEXT</span> <i class="fa fa-check"></i></button>
+                </div>
+                
+            </form>
+        </div>
+        </div>
+     
+  </body>
+</html>

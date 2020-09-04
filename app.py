@@ -18,29 +18,53 @@ def index():
     #return render_template("index.html")
 
 
-@app.route("/setup")
+@app.route("/setup", methods=["GET", "POST"])
 def setup():
     username = get_username()
     if not username:
         return redirect(url_for("login"))
+    
+    if request.method == "GET":
+        #return render_template("setup.html",myname = session["name"])
+        return render_template("details.html")
+    else:
+        session["date"] = request.form["date"]
+        return redirect(url_for("loading",functiontocall = "medicalsummary"))
 
-    return render_template("setup.html",myname = session["name"])
+@app.route("/loading/<functiontocall>", methods=["GET", "POST"])
+def loading(functiontocall):
+    return render_template("loader.html",nextfunc = functiontocall)
 
+
+@app.route("/medicalsummary")
+def medicalsummary():
+    return render_template("medicalsummary.html",myname = session["name"],mydate = session["date"])
+
+@app.route("/budget", methods=["GET", "POST"])
+def budget():
+    if request.method == "GET":
+        return render_template("budget.html")
+    else:
+        session["budget"] = request.form["budget"]
+        return redirect(url_for("singpass_and_dbs"))
+
+@app.route("/pullexternaldata")
+def singpass_and_dbs():
+    return render_template("externaldata.html")
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
     username = get_username()
     if username:
-        return redirect(url_for("details"))
+        return redirect(url_for("index"))
 
     if request.method == "GET":
         return render_template("login.html")
     else:
-        username = request.form["username"]
+        session["username"] = username = request.form["username"]
         password = request.form["password"]
         
-        session["username"] = "Lum Name"
-        return redirect(url_for("details"))
+        return redirect(url_for("index"))
 
         #if db.login(username, hash(password)):
         #    session["username"] = username

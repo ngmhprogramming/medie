@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Medi</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,latin-ext" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="static/default.css">
+    <script src="static/login.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      
+    <style type="text/css">
+        .moneytext {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+    </style>
+    <div class="materialContainer">
+        <div class="box">
+                <div class="title">Hi {{myname}}</div>
+                
+                <p style="display:inline-block;margin-top: 10px;margin-bottom: 15px;">Details of your medical bill from <b>{{mydate}}</b></p>
+
+                <div class="input" style="padding: 10px 0px 10px 0px;">
+                    <span class="text" style="font-size: 18px;margin-bottom: 5px;">One-off Cost ($)</span>
+                    <p class="moneytext">5000</p>
+                </div>
+
+                <div class="input" style="padding: 10px 0px 10px 0px;">
+                    <span class="text" style="font-size: 18px;margin-bottom: 5px;">Monthly Recurrent Cost ($)</span>
+                    <p class="moneytext">1000</p>
+                </div>
+
+                <div class="input" style="padding: 10px 0px 10px 0px;">
+                    <span class="text" style="font-size: 18px;margin-bottom: 5px;">Type of care: </span>
+                    <span style="background-color: rgba(0,128,0,0.4);padding:10px;border-radius: 4px;margin-left: 5px;">Primary Care</span>
+                </div>
+
+                <div style="padding: 10px 0px 10px 0px;">
+                    <span class="text" style="font-size: 18px;margin-bottom: 5px;">Medicine Prescribed</span>
+                    <p class="moneytext">
+                    Acetazolamide (Diamox) - twice a day<br> 
+                    Isosorbide dinitrate (Isordil) - once a day<br>
+                    Aspirin - twice a day<br>
+                    Apixaban (Eliquis) - once a week<br>
+                    </p>
+                </div>
+                
+
+                <div class="button login">
+                    <a href="/budget"><button><span>Confirm</span> <i class="fa fa-check"></i></button></a>
+                </div>
+                
+            </form>
+        </div>
+        </div>
+     
+  </body>
+</html>
