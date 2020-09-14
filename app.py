@@ -1,7 +1,7 @@
 from flask import Flask, render_template, session, redirect, url_for, request
 
 app = Flask(__name__, static_url_path="/static")
-app.secret_key = "mereallywannadie69420"
+app.secret_key = "mereallywannaloveAWSrn"
 
 def get_username():
     if "username" in session: return session["username"]
