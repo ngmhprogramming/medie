@@ -13,7 +13,7 @@ def index():
     if not username:
         return redirect(url_for("login"))
 
-    session["name"] = "Mr Lum"
+    
     return redirect(url_for("setup"))
     #return render_template("index.html")
 
@@ -28,13 +28,17 @@ def setup():
         #return render_template("setup.html",myname = session["name"])
         return render_template("details.html")
     else:
+        session["name"] = request.form["name"]
         session["date"] = request.form["date"]
         return redirect(url_for("loading",functiontocall = "medicalsummary"))
 
-@app.route("/loading/<functiontocall>", methods=["GET", "POST"])
+@app.route("/loading/<functiontocall>")
 def loading(functiontocall):
-    return render_template("loader.html",nextfunc = functiontocall)
+    return render_template("loader.html",nextfunc = functiontocall, themessage="Getting your details")
 
+@app.route("/loading2/<functiontocall>")
+def loading2(functiontocall):
+    return render_template("loader.html",nextfunc = functiontocall,themessage="Processing... hold tight!")
 
 @app.route("/medicalsummary")
 def medicalsummary():
@@ -51,6 +55,31 @@ def budget():
 @app.route("/pullexternaldata")
 def singpass_and_dbs():
     return render_template("externaldata.html")
+
+@app.route("/datasummary")
+def summary_data():
+    return render_template("datasummary.html")
+
+@app.route("/dashboard_intro")
+def dashboard_intro():
+    return render_template("dashboard_intro.html")
+
+@app.route("/view/<scheme_name>")
+def view_schemes(scheme_name):
+    if scheme_name == "CareshieldLife":
+        return render_template("scheme1.html")
+    elif scheme_name == "MedishieldLife":
+        return render_template("scheme2.html")
+
+
+@app.route("/dashboard")
+def dashboard2():
+    return render_template("dashboard.html")
+
+
+@app.route("/reminder")
+def remind():
+    return render_template("reminder.html")
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -76,6 +105,7 @@ def logout():
     session.pop("username", None)
     return redirect(url_for("login"))
 
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     username = get_username()
@@ -96,6 +126,7 @@ def register():
         #    return redirect(url_for("login"))
         #return render_template("signup.html", error="Username taken!")
 
+"""
 @app.route("/details", methods=["GET", "POST"])
 def details():
     if request.method == "GET":
@@ -109,6 +140,7 @@ def bills():
         return render_template("bills.html")
     else:
         return redirect(url_for("bills"))
+"""
 
 if __name__ == "__main__":
     app.run(debug=True)

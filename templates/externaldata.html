@@ -11,37 +11,38 @@
       
     <div class="materialContainer">
         <div class="box">
-            <form action="#" method="POST">
+            
                 <div class="title" style="margin-bottom: 25px;">Retrieve MyInfo<br>and Bank Details</div>
                 
                 <h3 class="dividertext">Please authorise Medi to retrieve data from MyInfo using SingPass</h3>
-                <p>Data we will collect:
+                <span>Data we will collect:
                     <ul>
-                        <li>CPF savings balance</li>
-                        <li>Medisave</li>
+                        <li>Medisave balance</li>
                         <li>Birthday</li>
                         <li>Citizenship</li>
+                        <li>Monthly household income</li>
                     </ul>
-                </p>
+                </span>
 
-                <div class="input">
-                    <label for="name">Connect to MyInfo</label>
-                    <input type="" name="name" id="name">
+                <div class="input singpassstyle">
+                    <input type="checkbox" id="Singpass" name="Singpass">
+                    <label class="whatever" for="Singpass" style="user-select:none;">Login with <img style="width: 4em;margin-bottom: -5px;" src="/static/singpass.png"></label>
                     <span class="spin"></span>
                 </div>
 
                 <h3 class="dividertext">Please also authorise Medi to get your bank account balance with DBS</h3>
                 <p>Data we will collect: Bank balance</p>
 
-                <div class="input">
-                    <label for="name2">Connect to DBS</label>
-                    <input type="select" name="name2" id="name2">
+
+                <div class="input dbsstyle">
+                    <input type="checkbox" id="DBS" name="DBS">
+                    <label class="whatever" for="DBS" style="user-select:none;">Connect to <img style="width: 4em;margin-bottom: -5px;" src="/static/dbs_logo.png"></label>
                     <span class="spin"></span>
                 </div>
 
 
                 <div class="button login">
-                    <button type="submit"><span>Retrieve data</span> <i class="fa fa-check"></i></button>
+                    <a href="/loading/datasummary"><button><span>Retrieve data</span> <i class="fa fa-check"></i></button></a>
                 </div>
                 
             </form>

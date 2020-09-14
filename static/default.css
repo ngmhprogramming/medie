@@ -1,3 +1,41 @@
+a:not(.normallink) {
+    text-decoration: none;
+    color: inherit;
+    user-select:none;
+    cursor: pointer;
+}
+
+.moneytext {
+    font-family: 'Montserrat', sans-serif;
+}
+
+input[type=checkbox]{
+    display: none !important;
+}
+
+
+.singpassstyle input[type=checkbox]:checked + .whatever {
+    background-color: rgb(237, 37, 83);
+    border: solid 0.5px rgb(237, 37, 83);
+
+}
+
+.dbsstyle input[type=checkbox]:checked + .whatever {
+    background-color: rgb(30,144,255);
+    border: solid 0.5px rgb(30,144,255);
+    
+}
+
+
+.whatever{
+    background-color: white;
+    border: solid 0.5px #DCDCDC;
+    display: block;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
 .dividertext {
     display: inline-block;
 }
@@ -300,13 +338,13 @@
  
  .material-button,
  .alt-2 {
-    width: 140px;
-    height: 140px;
+    width: 25px;
+    height: 20px;
     border-radius: 50%;
     background: #ED2553;
     position: absolute;
-    top: 40px;
-    right: -70px;
+    top: 10px;
+    right: -10px;
     cursor: pointer;
     z-index: 100;
     transform: translate(0%, 0%);
@@ -369,7 +407,7 @@
  
  body,
  html {
-    overflow: auto;
+    overflow: hidden;
  }
  
  .materialContainer {

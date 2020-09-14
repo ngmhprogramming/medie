@@ -1,0 +1,153 @@
+<html>
+  <head>
+    <title>Medi Dashboard</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,latin-ext" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="static/default.css">
+    <script src="static/login.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    
+    <style type="text/css">
+        .myflexbox {
+            display: flex !important;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: baseline;
+            border-radius: 5px;
+            border: 0.1px rgba(0,0,0,0.1) solid
+        }
+
+        .flexchildren {
+            font-size: 16px;
+            margin: 8px;
+            flex-grow: 1;
+            height: auto;
+            position: relative;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .flexchildren:hover {
+            background-color: #ED2553;
+            flex-grow: 2.3;
+        }
+
+        .lmao li {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background: rgb(173,255,47);
+            border: 1px solid grey;
+            border-radius: 5px;
+            margin: 10px 0px 10px 0px;
+            cursor: pointer;
+        }
+
+        .tablemoneytext {
+            font-family: 'Montserrat', sans-serif;
+            color: #ED2553;
+        }
+
+    </style>
+
+    <div class="materialContainer">
+        <div class="box">
+
+                <div class="title">YAY!! We found it</div>
+            
+                <h3 class="dividertext">For best benefits, apply for these:</h3>
+
+                <div class="myflexbox">
+                    <a href="/view/CareshieldLife"><div class="flexchildren">Careshield Life</div></a>
+                    <a href="/view/MedishieldLife"><div class="flexchildren">Medishield Life</div></a>
+                    <a><div class="flexchildren">Medisave</div></a>
+                    <a><div class="flexchildren">MediFund</div></a>
+                    <a><div class="flexchildren">Subsidies for drugs at public health institutions</div></a>
+                </div>
+                
+
+                <div class="button login" style="margin-bottom: 10px;">
+                    <a href="/dashboard"><button><span>Apply for all</span> <i class="fa fa-check"></i></button></a>
+                </div>
+
+                <h2 class="dividertext" style="color: #ED2553;">Effective Cost breakdown</h2>
+                <h3>One off cost ($)</h3>
+                
+                    <table style="width:100%">
+                      <tr>
+                        <td>Original Cost</td>
+                        <td class="tablemoneytext">34200</td>
+                      </tr>
+                      <tr>
+                        <td>Medishield Life Subsidies</td>
+                        <td class="tablemoneytext">- 5000</td> 
+                      </tr>
+                      <tr>
+                        <td>Offset from Medisave balance</td>
+                        <td class="tablemoneytext">- 8800 (limit)</td> 
+                      </tr>
+                      <tr>
+                        <td>Medifund application<br>(60% further subsidy)</td>
+                        <td class="tablemoneytext">- 12240</td> 
+                      </tr>
+                      <tr style="padding-top: 10px;">
+                        <td style="padding-top: 10px;">Payment from bank balance<br>(OOP)</td>
+                        <td style="padding-top: 10px;" class="tablemoneytext"><b>8160</b></td> 
+                      </tr>
+                    </table>
+
+                <h3>Monthly Recurrent cost ($)</h3>
+                
+                    <table style="width:100%">
+                      <tr>
+                        <td>Original Cost</td>
+                        <td class="tablemoneytext">500</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>Subsidy for drugs at<br>public health institutions (50%)</td>
+                        <td class="tablemoneytext">- 250</td> 
+                      </tr>
+
+                      <tr>
+                        <td>CareShield Life offset</td>
+                        <td class="tablemoneytext">- 600</td> 
+                      </tr>
+                      
+                      <tr style="padding-top: 10px;">
+                        <td style="padding-top: 10px;">Amount payable per month</td>
+                        <td style="padding-top: 10px;" class="tablemoneytext"><b>- 350</b></td> 
+                      </tr>
+                    </table>
+
+                    <h3 style="width: 100%;text-align: center;margin-top: 35px;">Under Budget? <span style="background-color: #228B22;padding: 5px;border-radius: 3px;">Yes</span></h3>
+                     
+                
+
+
+                <h3 class="dividertext" style="margin-top: 20px;">All schemes you are eligible for</h3>
+
+                <ul class="lmao" style="margin-top: 0px;">
+                    <li style="margin-top: 0px;">Medishield Life</li>
+                    <li>Careshield Life</li>
+                    <li>Medisave</li>
+                    <li>ElderShield</li>
+                    <li>ElderFund</li>
+                    <li>MediFund</li>
+                    <li>Subsidies for drugs at public health institutions</li>
+                    <li>Merdeka Gen. Package</li>
+                    <li>CHAS</li>
+                </ul>
+
+            
+
+        </div>
+     </div>
+  </body>
+</html>
