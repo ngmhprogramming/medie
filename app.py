@@ -70,6 +70,8 @@ def view_schemes(scheme_name):
         return render_template("scheme1.html")
     elif scheme_name == "MedishieldLife":
         return render_template("scheme2.html")
+    elif scheme_name == "Eldershield":
+        return render_template("scheme3.html")
 
 
 @app.route("/dashboard")
